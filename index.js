@@ -104,8 +104,8 @@ app.get("/hello", (req, res) => {
   res.send("Hello updated here")
 })
 
-app.listen(port, ()=>{
-    console.log("listening on port", port);
+app.listen(process.env.PORT || 5000, () => {
+  console.log("listening on port", port);
 });
 
 
