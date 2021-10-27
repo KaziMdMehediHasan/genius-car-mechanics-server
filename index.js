@@ -87,13 +87,8 @@ async function run() {
     // await client.close();
   }
 }
-run().catch();
+run().catch(console.dir);
 
-client.connect((err) => {
-  const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-  client.close();
-});
 
 //end of database connection
 
