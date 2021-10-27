@@ -37,13 +37,11 @@ async function run() {
 
     //get API
 
-    app
-      .get("/services", async (req, res) => {
-        const cursor = servicesCollection.find({});
-        const services = await cursor.toArray();
-        res.json(services);
-      })
-      .catch((err) => console.log(err));
+    app.get("/services", async (req, res) => {
+      const cursor = servicesCollection.find({});
+      const services = await cursor.toArray();
+      res.json(services);
+    });
 
     //get single service
 
@@ -89,7 +87,7 @@ async function run() {
     // await client.close();
   }
 }
-run().catch(console.dir);
+run().catch();
 
 client.connect((err) => {
   const collection = client.db("test").collection("devices");
