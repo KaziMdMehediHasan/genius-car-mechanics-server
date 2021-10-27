@@ -17,7 +17,7 @@ app.use(express.json());
 
 // connecting the database
 
-const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.tzgvu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.tzgvu.mongodb.net/carMechanic?retryWrites=true&w=majority`;
 
 //   console.log(uri);
 
