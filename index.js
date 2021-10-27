@@ -6,7 +6,7 @@ require('dotenv').config();
 const app = express();
 const cors = require('cors');
 
-const port = process.env.PORT || 5000;
+const port = Process.env.PORT || 5000;
 
 //middleware
 app.use(cors());
@@ -124,6 +124,7 @@ every project :
 6. heroku login
 7. heroku create (one time for a project)
 8. command : git push heroku main
+9. heroku > app > settings > add Var (add DB_User)
 -----------
 
 update 
