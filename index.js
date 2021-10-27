@@ -37,11 +37,13 @@ async function run() {
 
     //get API
 
-    app.get("/services", async (req, res) => {
-      const cursor = servicesCollection.find({});
-      const services = await cursor.toArray();
-      res.json(services);
-    });
+    app
+      .get("/services", async (req, res) => {
+        const cursor = servicesCollection.find({});
+        const services = await cursor.toArray();
+        res.json(services);
+      })
+      .catch((err) => console.log(err));
 
     //get single service
 
